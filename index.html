@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>HTML Forms Homework</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/styles.css"/>
+        <link href="fontawesome/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese">
+    </head>
+    <body>
+        <header class="header">
+            <button class="btn" type="button" name="button">
+                <i class="fas fa-long-arrow-alt-left ico">
+                </i>Go back
+            </button>
+            <button class="btn" type="button" name="button">
+                <i class="fas fa-user ico">
+                </i>Sign in
+            </button>
+        </header>
+        <main>
+            <div class="order-form-body">
+                <div class="order-info">
+                    <div class="wrapper">
+                        <div class="order-info-heading">
+                            <h4><i class="fas fa-clipboard ico"></i>Your order</h4>
+                        </div>
+                        <div class="order-info-details">
+                            <div class="tr heading">
+                                <div class="td"><span>Items</span></div>
+                                <div class="td"><span>Details</span></div>
+                                <div class="td"><span>Price</span></div>
+                                <div class="td"><span>Delivery</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td"><span>2 documents</span></div>
+                                <div class="td"><span>2 languages</span></div>
+                                <div class="td"><span>$ 696.06</span></div>
+                                <div class="td"><span>48 hours*</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn mint" type="submit" name="button">Place order</button>
+                        <button class="btn grey" type="submit" name="button">Print a quote</button>
+                    </div>
+                </div>
+                <div class="order-info">
+                    <div class="order-info-heading">
+                        <h4><i class="far fa-life-ring ico"></i>Help center</h4>
+                    </div>
+                    <p class="sm-light-grey">If you need assistance while placing your order, contact one of our
+                        beloved Project Manager by phone or email.
+                    </p>
+                        <a class="phone" href="tel:+971(0)555 555">+971(0)555 555</a>
+                        <a class="email" href="mailto:help@qtest.com">help@qtest.com</a>
+                </div>
+                <div class="order-section">
+                    <div class="wrapper">
+                        <h1 class="select-type-title">Select what you want to translate</h1>
+                        <div class="wrapper">
+                            <input type="radio" name="translate-type" value="website">
+                            <input type="radio" name="translate-type" value="documents">
+                            <input type="radio" name="translate-type" value="social-account">
+                        </div>
+                    </div>
+                </div>
+                <div class="order-section">
+                    <div class="step-heading">
+                        <h2 class="step-title" number="1">Upload your documents</h2>
+                        <span>(Doc, Docx, Text, PDF, Markdown)</span>
+                    </div>
+                    <input id="file" type="file" value="">
+                    <label for="file" class="file btn grey">Upload a new file</label>
+                    <div class="info-block">
+                    </div>
+                </div>
+                <div class="order-section">
+                    <div class="step-heading">
+                        <h2 class="step-title" number="2">Choose your languages pairings</h2>
+                    </div>
+                    <select class="" name="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <select class="" name="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <select class="" name="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <button class="btn grey" type="button" name="button">
+                        <i class="fas fa-plus ico">
+                        </i>Add
+                    </button>
+                </div>
+                <div class="order-section">
+                    <div class="step-heading">
+                        <h2 class="step-title" number="3">Select your desired tone</h2>
+                    </div>
+                    <input type="radio" name="desired-tone" value="casual">
+                    <input type="radio" name="desired-tone" value="pro">
+                    <input type="radio" name="desired-tone" value="formal">
+                </div>
+                <div class="order-section">
+                    <div class="step-heading">
+                        <h2 class="step-title" number="4">Tell us how urgent this job is</h2>
+                    </div>
+                    <input class="range" type="range" name="" min="0" max="11" value="5" step="1">
+                    <div class="info-block">
+                    </div>
+                </div>
+                <div class="order-section">
+                    <div class="step-heading">
+                        <h2 class="step-title" number="5">Sign up and choose a payment method</h2>
+                    </div>
+                    <p class="text-medium">Already have an account with us?
+                        <a href="#">Sign in</a>.
+                    </p>
+                    <input type="text" name="" value="">
+                    <input type="email" name="" value="">
+                    <input type="password" name="" value="">
+                    <input type="radio" name="payment-method" value="visa-mastercard">
+                    <input type="radio" name="payment-method" value="paypal">
+                    <input type="radio" name="payment-method" value="amazon">
+                    <input type="text" name="card" value="">
+                    <input type="text" name="date" value="">
+                    <input type="password" name="code" value="">
+                </div>
+                <label>
+                    <input type="checkbox" name="agreement" value="">
+                    I agree to the
+                </label>
+                <a href="#">Terms & Conditions</a>
+                <button class="btn mint" type="submit" name="button">Place order</button>
+                <button class="btn grey" type="submit" name="button">Print a quote</button>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-info-block">
+                <h4>What we do</h4>
+            </div>
+            <div class="footer-info-block">
+                <h4>Our main office</h4>
+            </div>
+            <div class="footer-info-block">
+                <h4>Connect with us</h4>
+            </div>
+        </footer>
+    </body>
+</html>
