@@ -6,10 +6,6 @@ body, html {
   margin: 0;
 }
 
-footer {
-  background-color: rgb(68, 75, 97);
-}
-
 h1, h2, h3, h4, h5, h6, select, label, p {
   margin: 0;
 }
@@ -23,25 +19,40 @@ th {
   white-space: nowrap;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .main {
   display: flex;
   justify-content: center;
   padding: 20px 0 90px 0;
 }
 
+.footer {
+  background-color: rgb(68, 75, 97);
+  padding: 20px;
+}
+
+.footer-info-block {
+  padding: 25px;
+  max-width: 200px;
+}
+
 .order-info-heading {
   width: 100%;
   height: 25%;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .order-info-heading h4 {
+  position: relative;
   text-transform: uppercase;
   color: #6e778e;
   font-weight: 500;
   letter-spacing: 0.5px;
   font-size: 14px;
-  margin-bottom: 10px;
 }
 
 .spacer {
@@ -104,8 +115,9 @@ th {
 }
 
 .header {
+  position: relative;
   box-sizing: border-box;
-  height: 100px;
+  height: 120px;
   padding: 20px;
 }
 
@@ -134,7 +146,14 @@ th {
   border-right-width: 0;
   z-index: 0;
   width: 100%;
+}
+
+.order-form-body,
+.footer .flex-row,
+.btn-group {
   max-width: 1023px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .order-info {
@@ -238,6 +257,23 @@ th {
   margin-right: 20px;
 }
 
+.logo {
+  border-radius: 50%;
+}
+
+.header-logo {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+}
+
+.logo img {
+  max-width: 80px;
+}
+
 .btn {
   display: inline-block;
   background: transparent;
@@ -264,9 +300,6 @@ th {
   justify-content: space-between;
   padding-top: 20px;
   width: 100%;
-  max-width: 1023px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .submit {
@@ -285,11 +318,11 @@ th {
 
 .ico {
   margin-right: 12px;
+  min-width: 1em;
 }
 
 input.personal-data {
   background-repeat: no-repeat;
-  background-position: right;
   background-position: 96% center;
   background-size: 18px;
   padding: 10px 35px 10px 15px;
@@ -331,12 +364,27 @@ input[type='password'] {
 }
 
 .card .global-input {
+  background: url(../image/visa.svg) no-repeat;
+  background-position: 96% center;
   text-align: center;
   letter-spacing: 0.2em;
+  padding-right: 45px;
+}
+
+.card .global-input:invalid {
+  border-color: #c7847f;
 }
 
 .date {
   width: 120px;
+}
+
+.date .global-input {
+  text-align: center;
+}
+
+.date .global-input:invalid {
+  border-color: #c7847f;
 }
 
 .date .global-input::placeholder {
@@ -347,6 +395,10 @@ input[type='password'] {
 .code {
   width: 60px;
   text-align: center;
+}
+
+.code .global-input:invalid {
+  border-color: #c7847f;
 }
 
 .global-input-label span {
@@ -707,6 +759,13 @@ span.media::before {
 .order-info-details a,
 .order-info-details p {
   height: fit-content;
+  position: relative;
+}
+
+.footer .order-info-details a,
+.footer .order-info-details p {
+  width: 100%;
+  text-decoration: none;
 }
 
 .file-name::before {
@@ -775,7 +834,7 @@ span.active {
 
 @media screen and (min-width: 375px) {
 
-  .order-info, .order-section, .header {
+  .order-info, .order-section, .header, .footer {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -784,6 +843,8 @@ span.active {
     position: absolute;
     left: -22px;
     font-size: 18px;
+    bottom: 50%;
+    transform: translateY(50%);
   }
 
   .info-block {
@@ -793,6 +854,10 @@ span.active {
 }
 
 @media screen and (min-width: 425px) {
+
+  .header-logo {
+    display: block;
+  }
 
   .order-info .flex-row {
     width: calc(100% - 160px);
@@ -828,7 +893,7 @@ span.active {
 
 @media screen and (min-width: 550px) {
 
-  .order-info, .order-section, .header {
+  .order-info, .order-section, .header, .footer {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -931,14 +996,26 @@ span.active {
 
 @media screen and (min-width: 1023px) {
 
-  .order-section, .header {
+  .order-section {
     padding-left: 90px;
     padding-right: 90px;
+  }
+
+  .header, .footer {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .order-form-body {
     border-left-width: 1px;
     border-right-width: 1px;
     border-radius: 4px;
+  }
+
+  .step-title::before {
+    padding: 10px;
+    bottom: 50%;
+    left: -46px;
+    transform: translateY(50%);
   }
 }
