@@ -1,6 +1,7 @@
 body, html {
   background-color: rgb(236, 238, 244);
   height: 100%;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
@@ -9,7 +10,7 @@ footer {
   background-color: rgb(68, 75, 97);
 }
 
-h1, h2, h3, h4, h5, h6, select, label {
+h1, h2, h3, h4, h5, h6, select, label, p {
   margin: 0;
 }
 
@@ -22,12 +23,25 @@ th {
   white-space: nowrap;
 }
 
-h4 {
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 90px 0;
+}
+
+.order-info-heading {
+  width: 100%;
+  height: 25%;
+  position: relative;
+}
+
+.order-info-heading h4 {
   text-transform: uppercase;
   color: #6e778e;
   font-weight: 500;
   letter-spacing: 0.5px;
-  font-size: 16px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .spacer {
@@ -50,6 +64,10 @@ h4 {
   justify-content: space-between;
 }
 
+.flex-col .radio {
+  max-width: 220px;
+}
+
 .step-heading {
   margin-bottom: 20px;
 }
@@ -63,10 +81,14 @@ h4 {
   text-indent: 32px;
 }
 
+.step-title span {
+  display: inline-block;
+  text-indent: 0;
+}
+
 .step-title::before {
   position: absolute;
   content: attr(number);
-  line-height: 1em;
   height: 1em;
   width: 1em;
   border: 1px solid grey;
@@ -76,6 +98,9 @@ h4 {
   text-indent: 0px;
   font-size: 14px;
   left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
@@ -84,12 +109,19 @@ h4 {
   padding: 20px;
 }
 
-.wrapper {
+.flex-row {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex-row-btwn {
   justify-content: space-between;
-  width: 100%
+}
+
+.flex-row-end {
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .order-form-body {
@@ -101,14 +133,11 @@ h4 {
   border-left-width: 0;
   border-right-width: 0;
   z-index: 0;
-}
-
-.order-section {
-  padding: 20px;
+  width: 100%;
+  max-width: 1023px;
 }
 
 .order-info {
-  padding: 20px;
   border-bottom-width: 1px;
   border-color: #cad1e0;
   border-style: solid;
@@ -116,9 +145,24 @@ h4 {
   border-left-width: 0;
   border-right-width: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 150px;
+}
+
+.help .order-info-details {
+  align-content: space-between;
+}
+
+.order-section, .order-info {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .info-block {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -126,6 +170,11 @@ h4 {
   border-radius: 4px;
   padding: 15px;
   margin-top: 20px;
+  min-height: 120px;
+}
+
+.info-block .flex-row .order-info-details {
+  align-items: center;
 }
 
 .table {
@@ -150,14 +199,22 @@ h4 {
   margin-right: 15px;
 }
 
-.order-info-details {
-  display: flex;
-  width: 100%;
+.table .column .td,
+.fixed .column .td {
+  margin-bottom: 10px;
 }
 
-.order-info-heading {
+.order-info-details {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 10px;
+  height: 75%;
+}
+
+.order-info-details .td {
+  font-size: 12px;
+  height: 20px;
+  font-weight: 400;
 }
 
 .tr {
@@ -171,14 +228,14 @@ h4 {
   font-weight: 300;
   height: 1.5em;
 }
-.heading .td{
+.order-info .heading .td {
   color: #6E768F;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .heading {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .btn {
@@ -187,9 +244,12 @@ h4 {
   border: 1px solid #cad1e0;
   border-radius: 4px;
   color: #a5adc4;
+  font-size: 12px;
   font-weight: 500;
-  padding: 15px;
   text-transform: uppercase;
+  padding: 15px;
+  max-width: 165px;
+  min-width: 120px;
 }
 
 .remove {
@@ -203,6 +263,14 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 20px;
+  width: 100%;
+  max-width: 1023px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit {
+  width: 130px;
 }
 
 .grey {
@@ -210,7 +278,7 @@ h4 {
 }
 
 .mint {
-  background-color: #7cc6c4;
+  background-color: #4cc5c2;
   border-color: #6ba9a7;
   color: #ffffff;
 }
@@ -220,21 +288,11 @@ h4 {
 }
 
 .main-input {
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 4px;
   border: 1px solid #cad1e0;
   padding: 10px 15px;
   width: 100%;
-}
-
-.main-input::after {
-  position: absolute;
-  content: '\f111';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  height: 8px;
-  width: 8px;
-  background: red;
 }
 
 .main-input-label {
@@ -242,10 +300,15 @@ h4 {
   margin-top: 25px;
   display: flex;
   width: 100%;
+  max-width: 240px;
+}
+
+.card {
+  max-width: 300px;
 }
 
 .date {
-  width: 100px;
+  width: 120px;
 }
 
 .code {
@@ -276,6 +339,7 @@ h4 {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid #cad1e0;
+  letter-spacing: 0.1em;
 }
 
 input[type=file] {
@@ -288,6 +352,7 @@ input[type=file] {
 .file.btn {
   font-weight: 400;
   text-transform: none;
+  font-size: 14px;
 }
 
 .file::before {
@@ -360,12 +425,13 @@ input[type='range'] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 }
 
 .range {
   display: flex;
   position: relative;
-  width: 70%;
+  width: 75%;
   height: 8px;
   border-radius: 4px;
   background: #b0b4ca3b;
@@ -387,7 +453,7 @@ input[type='range'] {
 }
 
 .points-description {
-  width: 70%;
+  width: 75%;
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -548,7 +614,7 @@ input[name='desired-tone'] {
 
 .radio {
   width: 80%;
-  height: 55px;
+  height: 65px;
   position: relative;
 }
 
@@ -602,6 +668,12 @@ span.media::before {
   font-size: 13px;
   font-weight: 300;
   color: #a5adc4;
+  line-height: 1.4em;
+}
+
+.order-info-details a,
+.order-info-details p {
+  height: fit-content;
 }
 
 .file-name::before {
@@ -609,6 +681,12 @@ span.media::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   margin-right: 12px;
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+  width: 200px;
 }
 
 .input-select {
@@ -622,12 +700,6 @@ span.media::before {
   padding: 15px 30px;
   cursor: pointer;
   width: 100%;
-}
-
-.select {
-  display: inline-block;
-  position: relative;
-  width: 75%;
 }
 
 .select::after {
@@ -664,4 +736,173 @@ span.active {
 
 .agreement {
   font-size: 12px;
+  color: #a5adc4;
+}
+
+@media screen and (min-width: 375px) {
+
+  .order-info, .order-section, .header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .order-info-heading h4 i {
+    position: absolute;
+    left: -22px;
+    font-size: 18px;
+  }
+
+  .info-block {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+
+  .order-info .flex-row {
+    width: calc(100% - 160px);
+  }
+
+  .order-info.help .flex-row {
+    width: 100%;
+  }
+
+  .order-info .btn-group {
+    width: 160px;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  input[name='translate-type'] {
+    height: 120px;
+  }
+
+  input[name='payment-method'] {
+    height: 60px;
+  }
+
+  .flex-col {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 550px) {
+
+  .order-info, .order-section, .header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .step-title {
+    text-indent: 0;
+  }
+
+  .step-title::before {
+    left: -36px;
+  }
+
+  .fixed {
+    width: 15%;
+  }
+
+  .table {
+    width: 85%;
+  }
+  input[name='translate-type']::after {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  form.flex-row .order-info {
+    width: calc(100% - 297px);
+    padding-left: 40px;
+    padding-right: 30px;
+  }
+
+  form.flex-row .order-info.help {
+    width: 297px;
+    border-left-width: 1px;
+  }
+
+  input[name='translate-type'] {
+    height: 150px;
+  }
+
+  .half-width {
+    width: 50%;
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  .right {
+    padding-left: 0;
+  }
+
+  input[name='payment-method'] {
+    height: 80px;
+    background-size: auto 25%;
+  }
+
+  input[name='translate-type'] {
+    background-size: auto 60%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+
+  .order-info-details .tr {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .order-info-details .td {
+    width: 25%;
+  }
+
+  .heading {
+    margin-right: 0px;
+    align-items: center;
+  }
+
+  .fixed {
+    width: 15%;
+  }
+
+  .table {
+    width: 85%;
+  }
+
+  input[name=translate-type] {
+    height: 180px;
+    background-position: center 30%;
+  }
+
+  input[name='translate-type']::after {
+    bottom: 25px
+  }
+
+  input[name=translate-type]:checked::after {
+    bottom: 22px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+
+  .order-section, .header {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .order-form-body {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-radius: 4px;
+  }
 }
