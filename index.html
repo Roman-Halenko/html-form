@@ -59,57 +59,107 @@
                 <div class="order-section">
                     <div class="wrapper">
                         <h1 class="select-type-title">Select what you want to translate</h1>
-                        <div class="wrapper">
-                            <input type="radio" name="translate-type" value="website">
-                            <input type="radio" name="translate-type" value="documents">
-                            <input type="radio" name="translate-type" value="social-account">
+                        <div class="wrapper type-select-container">
+                            <input type="radio" name="translate-type" value="Website">
+                            <input type="radio" name="translate-type" value="Documents">
+                            <input type="radio" name="translate-type" value="Social Account">
                         </div>
                     </div>
                 </div>
                 <div class="order-section">
                     <div class="step-heading">
-                        <h2 class="step-title" number="1">Upload your documents</h2>
-                        <span>(Doc, Docx, Text, PDF, Markdown)</span>
+                        <h2 class="step-title" number="1">Upload your documents
+                            <span class="sm-light-grey">(Doc, Docx, Text, PDF, Markdown)</span>
+                        </h2>
                     </div>
                     <input id="file" type="file" value="">
                     <label for="file" class="file btn grey">Upload a new file</label>
                     <div class="info-block">
+                        <div class="table">
+                            <div class="column">
+                                <div class="td"><span>File name</span></div>
+                                <div class="td"><span class="file-name">business_operations.docx</span></div>
+                                <div class="td"><span class="file-name">business_financial.docx</span></div>
+                            </div>
+                            <div class="column">
+                                <div class="td"><span>File size</span></div>
+                                <div class="td"><span>78kb</span></div>
+                                <div class="td"><span>26kb</span></div>
+                            </div>
+                            <div class="column">
+                                <div class="td"><span>Number of words</span></div>
+                                <div class="td"><span>842</span></div>
+                                <div class="td"><span>2,326</span></div>
+                            </div>
+                        </div>
+                        <div class="fixed">
+                            <div class="column">
+                                <div class="td"><span>Remove</span></div>
+                                <div class="td"><a href="#"><i class="fas fa-trash"></i></a></div>
+                                <div class="td"><a href="#"><i class="fas fa-trash"></i></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="order-section">
                     <div class="step-heading">
                         <h2 class="step-title" number="2">Choose your languages pairings</h2>
                     </div>
-                    <select class="" name="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <select class="" name="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <select class="" name="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <button class="btn grey" type="button" name="button">
-                        <i class="fas fa-plus ico">
-                        </i>Add
-                    </button>
+                    <div class="row">
+                        <div class="col">
+                            <label class="select" name="From">
+                                <select class="input-select grey" name="">
+                                    <option value="English">English</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="select" name="To">
+                                <select class="input-select grey" name="">
+                                    <option value="Arabic">Arabic</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="select" name="Additional">
+                                <select class="input-select grey" name="">
+                                    <option value="Kurdish">Kurdish</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </label>
+                            <a href="#"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <button class="btn grey" type="button" name="button">
+                            <i class="fas fa-plus ico">
+                            </i>Add
+                        </button>
+                    </div>
                 </div>
                 <div class="order-section">
                     <div class="step-heading">
                         <h2 class="step-title" number="3">Select your desired tone</h2>
                     </div>
-                    <input type="radio" name="desired-tone" value="casual">
-                    <input type="radio" name="desired-tone" value="pro">
-                    <input type="radio" name="desired-tone" value="formal">
+                    <div class="flex-col">
+                        <label class="radio">
+                            <input type="radio" name="desired-tone" value="casual">
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="desired-tone" value="pro">
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="desired-tone" value="formal">
+                        </label>
+                    </div>
                 </div>
                 <div class="order-section">
                     <div class="step-heading">
