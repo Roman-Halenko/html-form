@@ -154,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order-section half-width left">
+                    <div class="order-section left">
                         <div class="step-heading">
                             <h2 class="step-title" number="3">Select your desired tone</h2>
                         </div>
@@ -170,7 +170,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="order-section half-width right">
+                    <div class="order-section right">
                         <div class="step-heading">
                             <h2 class="step-title" number="4">Tell us how urgent this job is</h2>
                         </div>
@@ -207,19 +207,37 @@
                             <a href="#">Sign in</a>.
                         </p>
                         <div class="wrapper">
-                            <label class="main-input-label">
+                            <label class="global-input-label">
                                 <span>Full name</span>
-                                <input class="main-input" type="text" name="name" required>
+                                <input class="global-input personal-data"
+                                    minlength="4"
+                                    type="text"
+                                    name="name"
+                                    required>
                             </label>
                         </div>
                         <div class="flex-row">
-                            <label class="main-input-label">
+                            <label class="global-input-label">
                                 <span>Email adress</span>
-                                <input class="main-input" type="email" name="email" required>
+                                <input class="global-input personal-data"
+                                    minlength="4"
+                                    inputmode="email"
+                                    title="Follow the example: info@domain.io"
+                                    type="email"
+                                    name="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                    required>
                             </label>
-                            <label class="main-input-label">
+                            <label class="global-input-label">
                                 <span>Choose a password</span>
-                                <input class="main-input" maxlength="16" type="password" name="password" required>
+                                <input class="global-input personal-data"
+                                    title="The password should be at least 6 characters, contain at least one number, one lowercase and one uppercase letter."
+                                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                                    minlength="6"
+                                    maxlength="16"
+                                    type="password"
+                                    name="password"
+                                    required>
                             </label>
                         </div>
                         <div class="wrapper flex-row flex-row-btwn spacer">
@@ -228,17 +246,30 @@
                             <input class="grey" type="radio" name="payment-method" value="amazon" required>
                         </div>
                         <div class="wrapper flex-row">
-                            <label class="main-input-label card">
+                            <label class="global-input-label card">
                                 <span>Card number</span>
-                                <input class="main-input" type="text" name="card" required>
+                                <input
+                                    minlength="16"
+                                    maxlength="19"
+                                    inputmode="numeric"
+                                    class="global-input"
+                                    type="text"
+                                    name="card"
+                                    required>
                             </label>
-                            <label class="main-input-label date">
+                            <label class="global-input-label date">
                                 <span>Expiry date</span>
-                                <input class="main-input" type="text" placeholder="DD/MM/YY" name="date" vrequired>
+                                <input class="global-input" type="text" placeholder="DD/MM/YY" name="date" vrequired>
                             </label>
-                            <label class="main-input-label code">
+                            <label class="global-input-label code">
                                 <span>Code</span>
-                                <input class="main-input" maxlength="3" type="password" name="code" required>
+                                <input
+                                    inputmode="numeric"
+                                    class="global-input"
+                                    maxlength="3"
+                                    type="password"
+                                    name="code"
+                                    required>
                             </label>
                         </div>
                     </div>
