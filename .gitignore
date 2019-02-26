@@ -1,4 +1,9 @@
 .DS_Store
 DS_Store?
 
-*.svg
+scss
+svgs
+sprites
+webfonts
+js
+metadata
