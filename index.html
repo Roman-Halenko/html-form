@@ -60,15 +60,15 @@
                                     placing your order, contact one of our
                                     beloved Project Manager by phone or email.
                                 </p>
-                                <a class="phone" href="tel:+971(0)555 555">+971(0)555 555</a>
+                                <a class="phone" href="tel:+971(0)555555">+971(0)555 555</a>
                                 <a class="email" href="mailto:help@qtest.com">help@qtest.com</a>
                             </div>
                         </div>
                     </div>
                     <div class="order-section">
                         <div class="wrapper">
-                            <h1 class="select-type-title">Select what you want to translate</h1>
-                            <div class="wrapper flex-row flex-row-btwn spacer">
+                            <h1 class="select-type-title spacer">Select what you want to translate</h1>
+                            <div class="flex-row flex-row-btwn spacer">
                                 <input type="radio" name="translate-type" value="Website" required>
                                 <input type="radio" name="translate-type" value="Documents" required>
                                 <input type="radio" name="translate-type" value="Social Account" required>
@@ -77,11 +77,11 @@
                     </div>
                     <div class="order-section">
                         <div class="step-heading">
-                            <h2 class="step-title" number="1">Upload your documents
+                            <h2 class="step-title" step-order="1">Upload your documents
                                 <span class="sm-light-grey">(Doc, Docx, Text, PDF, Markdown)</span>
                             </h2>
                         </div>
-                        <input id="file" type="file" value="">
+                        <input id="file" type="file">
                         <label for="file" class="file btn grey">Upload a new file</label>
                         <div class="info-block">
                             <div class="table">
@@ -112,11 +112,11 @@
                     </div>
                     <div class="order-section">
                         <div class="step-heading">
-                            <h2 class="step-title" number="2">Choose your languages pairings</h2>
+                            <h2 class="step-title" step-order="2">Choose your languages pairings</h2>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="select" name="From">
+                                <label class="select" label-name="From">
                                     <select class="input-select grey" name="from" required>
                                         <option value="" disabled selected>Choose language</option>
                                         <option value="English">English</option>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="row flex-row">
                             <div class="col">
-                                <label class="select" name="To">
+                                <label class="select" label-name="To">
                                     <select class="input-select grey" name="to" required>
                                         <option value="" disabled selected>Choose language</option>
                                         <option value="Arabic">Arabic</option>
@@ -138,8 +138,8 @@
                                 </label>
                             </div>
                             <div class="col">
-                                <label class="select" name="Additional">
-                                    <select class="input-select grey" name="" required>
+                                <label class="select" label-name="Additional">
+                                    <select class="input-select grey" name="additional" required>
                                         <option value="" disabled selected>Choose language</option>
                                         <option value="Kurdish">Kurdish</option>
                                         <option value="Arabic">Arabic</option>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="order-section left">
                         <div class="step-heading">
-                            <h2 class="step-title" number="3">Select your desired tone</h2>
+                            <h2 class="step-title" step-order="3">Select your desired tone</h2>
                         </div>
                         <div class="flex-col">
                             <label class="radio"><span class="casual">Friendly / Casual</span>
@@ -173,12 +173,12 @@
                     </div>
                     <div class="order-section right">
                         <div class="step-heading">
-                            <h2 class="step-title" number="4">Tell us how urgent this job is</h2>
+                            <h2 class="step-title" step-order="4">Tell us how urgent this job is</h2>
                         </div>
                         <div class="range-container">
                             <div class="range">
                                 <i class="middle-point fas fa-circle"></i>
-                                <input type="range" name="" min="1" max="3" value="2" step="1">
+                                <input type="range" name="range" min="1" max="3" value="2" step="1">
                             </div>
                             <div class="points-description">
                                 <span>I got time</span>
@@ -202,12 +202,12 @@
                     </div>
                     <div class="order-section payment">
                         <div class="step-heading">
-                            <h2 class="step-title" number="5">Sign up and choose a payment method</h2>
+                            <h2 class="step-title" step-order="5">Sign up and choose a payment method</h2>
                         </div>
                         <p class="md-regular-grey spacer">Already have an account with us?
                             <a href="#">Sign in</a>.
                         </p>
-                        <div class="wrapper">
+                        <div class="flex-row">
                             <label class="global-input-label">
                                 <span>Full name</span>
                                 <input class="global-input personal-data"
@@ -241,12 +241,12 @@
                                     required>
                             </label>
                         </div>
-                        <div class="wrapper flex-row flex-row-btwn spacer">
+                        <div class="flex-row flex-row-btwn spacer">
                             <input class="grey" type="radio" name="payment-method" value="visa-mastercard" required>
                             <input class="grey" type="radio" name="payment-method" value="paypal" required>
                             <input class="grey" type="radio" name="payment-method" value="amazon" required>
                         </div>
-                        <div class="wrapper flex-row">
+                        <div class="flex-row">
                             <label class="global-input-label card">
                                 <span>Card number</span>
                                 <input
@@ -286,7 +286,7 @@
                         </div>
                     </div>
                     <div class="order-section flex-row flex-row-end">
-                        <div class="wrapper spacer">
+                        <div class="spacer">
                             <label class="agreement">
                                 <input type="checkbox" name="agreement" required>
                                 I agree to the
@@ -329,13 +329,15 @@
                         <h4><i class="fas fa-share-alt ico"></i>Connect with us</h4>
                     </div>
                     <div class="order-info-details">
-                        <a class="sm-light-grey facebook" href="#">Facebook</a>
-                        <a class="sm-light-grey twitter" href="#">Twitter</a>
-                        <a class="sm-light-grey linkedin" href="#">Linkedin</a>
+                        <a class="sm-light-grey" href="#"><i class="fab fa-facebook-f ico"></i>Facebook</a>
+                        <a class="sm-light-grey" href="#"><i class="fab fa-twitter ico"></i>Twitter</a>
+                        <a class="sm-light-grey" href="#"><i class="fab fa-linkedin-in ico"></i>Linkedin</a>
                     </div>
                 </div>
                 <div class="footer-info-block">
-                    <a class="logo" href="#"><img src="image/logo.png" alt="logo"></a>
+                    <div class="order-info-details">
+                        <a class="logo" href="#"><img src="image/logo.png" alt="logo"></a>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -99,7 +99,7 @@ th {
 
 .step-title::before {
   position: absolute;
-  content: attr(number);
+  content: attr(step-order);
   height: 1em;
   width: 1em;
   border: 1px solid grey;
@@ -268,6 +268,12 @@ th {
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.1;
+  transition-duration: 300ms;
+  transition-property: opacity;
+}
+
+.header-logo:hover {
+  opacity: 0.4;
 }
 
 .logo img {
@@ -286,12 +292,27 @@ th {
   padding: 15px;
   max-width: 165px;
   min-width: 120px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  transition-property: color;
+}
+
+.btn:hover, .remove:hover {
+  color: #444c60;
+}
+
+.btn:active {
+  background-color: #498298;
+  color: #ffffff;
+  border-color: #6ba9a7;
 }
 
 .remove {
   margin-right: 20px;
   border-radius: 4px;
   color: #a5adc4;
+  transition-duration: 300ms;
+  transition-property: color;
 }
 
 .btn-group {
@@ -422,7 +443,6 @@ input[type='password'] {
   text-transform: uppercase;
   width: 100%;
   padding-bottom: 10px;
-  margin-bottom: 20px;
   border-bottom: 1px solid #cad1e0;
   letter-spacing: 0.1em;
 }
@@ -450,6 +470,7 @@ input[type=file] {
 }
 
 input[type=radio] {
+  cursor: pointer;
   border: 1px solid #d7dae0;
   border-radius: 4px;
   box-sizing: border-box;
@@ -457,6 +478,12 @@ input[type=radio] {
   margin: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+input[type=radio]:hover {
+  background-color: #dbebf7;
 }
 
 input[type=radio]:checked {
@@ -489,6 +516,7 @@ input:focus, button:focus, a:focus, select:focus, input[type=file]:focus ~ .file
 
 a:focus {
   background: #7cc6c4;
+  color: #444c60;
 }
 
 input[type='file']:focus {
@@ -711,6 +739,7 @@ input[name='desired-tone'] {
   top: 50%;
   white-space: nowrap;
   z-index: 1;
+  pointer-events: none;
 }
 
 .radio span::before {
@@ -793,6 +822,8 @@ span.media::before {
   padding: 15px 30px;
   cursor: pointer;
   width: 100%;
+  transition-duration: 300ms;
+  transition-property: color;
 }
 
 .select::after {
@@ -809,10 +840,23 @@ span.media::before {
   bottom: 0;
   padding: 15px;
   pointer-events: none;
+  transition-duration: 300ms;
+  transition-property: color;
+}
+
+.fixed a {
+  transition-duration: 300ms;
+  transition-property: color;
+}
+
+.input-select:hover,
+.select:hover::after,
+.fixed a:hover {
+  color: #444c60;
 }
 
 .row .col:first-of-type .select::before {
-  content: attr(name);
+  content: attr(label-name);
   position: absolute;
   color: #a5adc4;
   font-size: 12px;
@@ -888,6 +932,10 @@ span.active {
 
   .flex-row-end .wrapper .btn {
     margin-left: 20px;
+  }
+
+  .info-block {
+    padding-left: 45px;
   }
 }
 
