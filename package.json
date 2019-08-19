@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.10.1",
+    "cssnano": "^4.1.10",
     "sass": "^1.17.3",
     "shx": "^0.3.2"
   },
