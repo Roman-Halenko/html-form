@@ -7,3 +7,7 @@ sprites
 webfonts
 js
 metadata
+dist
+node_modules
+.cache
+yarn-error.log
